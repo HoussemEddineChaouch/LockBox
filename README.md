@@ -33,7 +33,7 @@ A **secure, random password generator and manager** web application built with *
 
 ## Live
 
-[![Demo Screenshot](link-to-screenshot-or-gif)](https://houssemeddinechaouch.github.io/LockBox/)
+(https://houssemeddinechaouch.github.io/LockBox/)
 
 ---
 
