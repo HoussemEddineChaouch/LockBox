@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #191d20;
+  --main-color-v2: #101214;
+  --second-color: #ffbb01;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-color);
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.generate-box {
+  background-color: var(--second-color);
+  padding: 30px;
+  width: 400px;
+  height: 413px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px var(--main-color-v2);
+  text-align: center;
+  border: 4px solid var(--main-color);
+  outline: 1px dotted var(--second-color);
+  position: relative;
+}
+.info-Text h2 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+.info-Text p {
+  max-width: 290px;
+  line-height: 1.7;
+  margin: 0 auto;
+  color: #0b2a30;
+  margin-bottom: 20px;
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.btns .inputs {
+  display: flex;
+  align-items: center;
+}
+.btns .inputs input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  color: var(--second-color);
+  font-family: "Titillium Web", sans-serif;
+}
+.btns .inputs input::selection {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+.btns .inputs input:focus {
+  outline: none;
+}
+svg {
+  position: absolute;
+  right: 15px;
+  width: 18px !important;
+  cursor: pointer;
+}
+.btns button {
+  color: var(--second-color);
+  font-weight: 400;
+  font-size: 17px;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 10px;
+}
+.btns button:hover {
+  background: transparent;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+.copyright {
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--second-color);
+  opacity: 0.7;
+}
+/* ------------ */
+.save-form {
+  background-color: var(--second-color);
+  padding: 20px;
+  border-radius: 20px;
+  border: 5px solid var(--main-color);
+  outline: 1px solid var(--second-color);
+  box-sizing: 0 0 20px var(--main-color-v2);
+  text-align: center;
+  position: relative;
+  width: 400px;
+  display: none;
+}
+.icon-close {
+  position: absolute;
+  right: 26px;
+  top: 26px;
+  cursor: pointer;
+}
+.icon-close i {
+  font-size: 22px;
+  color: var(--main-color);
+}
+.text-save {
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+.text-save h2 {
+  margin-bottom: 10px;
+}
+.text-save p {
+  font-size: 14px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.input-save {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.input-save .password-Generated {
+  padding: 12px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  color: var(--second-color);
+  font-family: "Titillium Web", sans-serif;
+}
+.input-save .password-Generated:focus {
+  outline: none;
+}
+.select-opt {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  border: none;
+  color: var(--second-color);
+  font-family: "Titillium Web", sans-serif;
+}
+.select-opt:focus {
+  outline: none;
+}
+.confirme-Btn {
+  width: 80%;
+  padding: 12px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 10px;
+  font-family: "Titillium Web", sans-serif;
+  color: var(--second-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.confirme-Btn:hover {
+  background-color: transparent;
+  color: var(--main-color);
+  font-weight: 600;
+  border: 1px solid var(--main-color);
+}
+.msg-saved,
+.msg-empty {
+  background-color: var(--second-color);
+  padding: 20px;
+  border-radius: 20px;
+  border: 5px solid var(--main-color);
+  outline: 1px dotted var(--second-color);
+  text-align: center;
+  color: var(--main-color);
+  display: none;
+  animation: tarns 1s 1 ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+.msg-saved h2,
+.msg-empty h2 {
+  margin-bottom: 15px;
+}
+
+@keyframes tarns {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mytable {
+  border: 1px solid var(--main-color);
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+}
+.mytable thead th {
+  background-color: var(--main-color);
+  padding: 15px;
+  color: var(--second-color);
+  font-weight: 400;
+}
+.mytable thead tr {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  text-align: left;
+}
+.mytable tr td {
+  padding: 10px;
+}
+.modify-btn {
+  margin-right: 5px;
+}
+.modify-btn,
+.delete-btn {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.modify-btn:hover,
+.delete-btn:hover {
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+.box-table {
+  width: 400px;
+  height: 450px;
+  overflow-y: auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--second-color);
+  border-radius: 20px;
+  box-shadow: 0 0 15px var(--main-color-v2);
+  border: 3px solid var(--main-color);
+  outline: 1px dotted var(--second-color);
+  display: none;
+}
+
+.box-table::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.box-table::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+.other-func {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 25;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--main-color);
+  backdrop-filter: blur(4px);
+}
+.other-func .other-btns button {
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: var(--second-color);
+  font-family: "Titillium Web", sans-serif;
+  cursor: pointer;
+}
+.other-func .icon-delete {
+  color: var(--main-color);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media print {
+  html,
+  body {
+    min-height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .box-table {
+    width: 100%;
+    min-height: 100vh;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    outline: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .mytable {
+    margin: 0 !important;
+  }
+  .mytable th {
+    color: black !important;
+  }
+  .other-func,
+  .copyright,
+  .btns-mangs,
+  .act-cell {
+    display: none;
+  }
+}

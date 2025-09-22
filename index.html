@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Password</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="generate-box">
+        <div class="info-Text" >
+            <h2>Random Generate Password</h2>
+            <p>
+                Create strong and secure passwords to keep your account safe online.
+            </p>
+        </div>
+        <div class="btns">
+            <div class="inputs">
+                <input type="text" class="text-view" readonly >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 20px;"><path d="M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6ZM6.9998 11V13H12.9998V11H6.9998ZM6.9998 15V17H12.9998V15H6.9998Z" fill="rgba(255,188,4,1)"></path></svg>            </div>
+                <button class="generate">Generate</button>
+                <button class="save-btn">Save</button>
+                <button class="manage-btn">Manage Passwords</button>
+            </div>
+        </div>
+        <div class="save-form">
+            <div class="icon-close">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <div class="text-save">
+                 <h2>Save Password</h2>
+                 <p>Do you find difficult to remember all your passwords
+                    let's Save It !
+                 </p>
+            </div>
+            <div class="input-save">
+                <input type="text" readonly class="password-Generated">
+                <select name="SociaMedia" id="" class="select-opt">
+                    <option value="Phone">Phone</option>
+                    <option value="Gmail">Gmail</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagrame">Instagrame</option>
+                    <option value="LinkedInd">LinkedIn</option>
+                    <option value="Github">Github</option>
+                    <option value="Behance">Behnace</option>
+                </select>
+               </div>
+               <button class="confirme-Btn">Confirme</button>
+            </div>
+        </div>
+        <div class="msg-saved">
+            <h2 class="show-pass"></h2>
+            <p>Saved Successfly</p>
+        </div>
+        <div class="msg-empty">
+            <i class="fa-regular fa-folder-open"></i>
+            <p>No passwords saved yet!</p>
+        </div>
+        <div class="box-table">
+            <div class="other-func">
+                <div class="other-btns">
+                    <button class="Print-all">PrintAll</button>
+                    <button class="Delete-All">Delete All</button>
+                </div>
+                <div class="icon-delete">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+            </div>
+            <table class="mytable" media="print">
+                <thead>
+                    <th>Type</th>
+                    <th>Password</th>
+                    <th class="act-cell">Action</th>
+                </thead>
+            </table>
+        </div>
+        </div>
+    <p class="copyright">Design And Development By Houssem Eddine Chaouch</p>
+    <script src="main.js"></script>
+</body>
+</html> 
